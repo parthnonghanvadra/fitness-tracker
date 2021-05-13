@@ -26,7 +26,7 @@ export class AuthService {
         this.store.dispatch(new Auth.SetAuthenticated());
         this.router.navigate(['/training']);
       } else {
-        this.trainingService.cancelSubscription();
+        this.trainingService.cancelSubscriptions();
         this.store.dispatch(new Auth.SetUnAuthenticated());
         this.router.navigate(['/login']);
       }
